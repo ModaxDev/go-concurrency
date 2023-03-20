@@ -2,6 +2,7 @@ package main
 
 import "testing"
 
+// That will work fine, but if you use -race inside the command, a failure because we don't know which one will be the last one to be executed.
 func Test_updateMessage(t *testing.T) {
 	msg = "Hello, universe!"
 
