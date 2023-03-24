@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"final_project/data"
 	"fmt"
 	"github.com/alexedwards/scs/redisstore"
 	"github.com/alexedwards/scs/v2"
@@ -34,6 +35,7 @@ func main() {
 		Wait:     &wg,
 		InfoLog:  infoLog,
 		ErrorLog: errorLog,
+		Models:   data.New(db),
 	}
 
 	go app.listenForShutdown()

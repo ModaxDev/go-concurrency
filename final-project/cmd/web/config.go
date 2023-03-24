@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"final_project/data"
 	"github.com/alexedwards/scs/v2"
 	"log"
 	"sync"
@@ -13,4 +14,5 @@ type Config struct {
 	InfoLog  *log.Logger
 	ErrorLog *log.Logger
 	Wait     *sync.WaitGroup
+	Models   data.Models
 }
